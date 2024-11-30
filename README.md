@@ -1,1 +1,3 @@
-# farm2fork-project
+
+# farm2fork
+A marketplace application for agriculture and livestock products.

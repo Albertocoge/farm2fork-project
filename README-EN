@@ -1,0 +1,146 @@
+🌱 Farm2Fork — Backend
+
+Agri-Food Marketplace Full-Stack Platform
+Connecting local farmers with digital consumers
+
+<div align="center">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+📌 Overview
+
+Farm2Fork is a full-stack web application designed to digitalize local agri-food producers, enabling them to sell directly to customers while promoting sustainability and eliminating intermediaries.
+
+This repository includes the server-side logic, session-based authentication, MVC structure, and server-rendered UI using Handlebars (HBS).
+
+🧩 Tech Stack
+Area	Technologies
+Backend	Node.js + Express
+Database	MongoDB + Mongoose
+Authentication	Express-Session + Cookies (httpOnly)
+Password Security	bcrypt hashing
+Views	Handlebars (HBS)
+Image Hosting	Cloudinary + Multer
+Payments	Stripe Checkout
+Deploy-Ready	Docker + Fly.io
+Logging & Debugging	Morgan
+🚀 Core Features
+
+✅ Register / Login (session-based authentication)
+✅ Manage & publish agricultural product listings
+✅ Cloud image uploads (producer photos + product photos)
+✅ Shopping cart stored in MongoDB
+✅ Secure Stripe integration for payments
+✅ Category + Subcategory filtering
+✅ User profile with published products
+✅ Protected routes based on authentication state
+
+📂 Project Architecture
+Farm2Fork/
+│
+├── config/                     # App configuration layer
+│
+├── controllers/                # Business logic
+│
+├── middlewares/                # Auth guards
+│
+├── models/                     # MongoDB schemas
+│
+├── routes/                     # App routing
+│
+├── views/                      # HBS UI templates
+│
+├── public/                     # Static assets (CSS, images, JS)
+│
+├── Dockerfile                  # Deploy container
+├── app.js                      # Server entry point
+└── package.json
+
+⚙️ Setup & Installation
+1️⃣ Clone & Install
+git clone https://github.com/Albertocoge/farm2fork.git
+cd farm2fork
+npm install
+
+2️⃣ Environment Variables
+
+Create a .env file:
+
+PORT=3000
+MONGODB_URI=mongodb://localhost:27017
+COOKIE_SECRET=your_secret_here
+CLOUDINARY_CLOUD_NAME=xxxx
+CLOUDINARY_API_KEY=xxxx
+CLOUDINARY_API_SECRET=xxxx
+STRIPE_SECRET_KEY=sk_test_xxx
+COOKIE_SECURE=false
+
+3️⃣ Run Server
+
+Development:
+
+npm run dev
+
+
+Production:
+
+npm start
+
+
+Navigate to:
+👉 http://localhost:3000
+
+🔐 Authentication & Authorization
+Security Feature	Status
+Session-based login	✅
+Secure & httpOnly cookies	✅
+Password encryption with bcrypt	✅
+Route guards (authenticated-only)	✅
+User-owner permissions for listings	✅
+💳 Stripe Payments
+
+Fully integrated Stripe Checkout Session ✅
+
+Redirect on success/cancel pages ✅
+
+Test payments available ✅
+
+Perfect basis for future order tracking.
+
+🎯 Project Purpose
+
+📌 Promote local economy by helping small farmers go digital and sell online efficiently and safely.
+
+🧑‍🤝‍🧑 Team
+Member	Role	GitHub
+Alberto Codoñer	Full-Stack Developer (main backend, sessions, cart, Stripe, Cloudinary)	https://github.com/Albertocoge
+
+Michael B. Díaz B.	Full-Stack Developer	https://github.com/MikeBDiazB
+🛠️ Roadmap
+Feature	Status
+Orders tracking after checkout	⏳ Planned
+Product reviews & ratings	⏳ Planned
+Explicit RBAC roles: farmer / buyer / admin	✅ To be added
+Distance-based product filtering	⏳ Future
+Sales analytics in profiles	⏳ Future
+🪪 License
+
+Published under the ISC License.
+Use, improve, and contribute with attribution 👏
+
+⭐ Support
+
+If this project inspired you, please give it a star ⭐ on GitHub!
+Your support helps keep sustainable development growing 🌱✨
